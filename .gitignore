@@ -8,3 +8,7 @@
 glue_data/*
 out/*
 venv/*
+myOutput/*
+myTwitterOutput/*
+myData/*
+output/*

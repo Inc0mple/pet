@@ -1,0 +1,11 @@
+python -m venv env
+.\venv\Scripts\activate
+pip install -r requirements.txt
+
+python cli.py --overwrite_output_dir --method pet --pattern_ids 0 1 2 --data_dir myData --model_type roberta --model_name roberta-base --task_name mental-health-tweets --output_dir ./myOutput --do_eval --do_train 
+
+
+python cli.py --overwrite_output_dir --method ipet --pattern_ids 0 1 2 --data_dir myData --model_type roberta --model_name roberta-large --task_name mental-health-tweets --output_dir ./myOutput --do_eval --do_train --lm_training --pet_per_gpu_unlabeled_batch_size 3
+python cli.py --overwrite_output_dir --method pet --pattern_ids 0 1 2 --data_dir myTwitterData --model_type roberta --model_name roberta-base --task_name mental-health-tweets --output_dir ./myTwitterOutput --do_eval --do_train 
+
+python cli.py --overwrite_output_dir --method ipet --pattern_ids 0 1 2 --data_dir myTwitterData --model_type roberta --model_name roberta-large --task_name mental-health-tweets --output_dir ./myTwitterOutput --do_eval --do_train --lm_training --pet_per_gpu_unlabeled_batch_size 3
